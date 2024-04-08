@@ -1,0 +1,32 @@
+.main-container{
+    margin: 1rem;
+}
+
+.primary-btn{
+    background-color: #020024 !important;
+    &:hover{
+        opacity: .7;
+    }
+}
+
+.secondary-btn{
+    border-color: #020024 !important;
+    color: #020024 !important;
+    &:hover{
+        background-color: #d3d3d3 !important;
+    }
+}
+
+.cancel-btn{
+    background-color: #ff0000 !important;
+    &:hover{
+        opacity: .7;
+    }
+}
+
+.save-btn{
+    background-color: #008000 !important;
+    &:hover{
+        opacity: .7;
+    }
+}
