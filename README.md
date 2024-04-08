@@ -21,3 +21,17 @@ o	Realizar migraciones iniciales y comprobar que los endpoints funcionen correct
 o	Inicializar un repositorio Git y realizar commits de todo el código desarrollado.
 o	Crear al menos una rama adicional y hacer al menos un cambio en cada una de ellas.
 o	Compartir el enlace al repositorio en GitHub.
+
+![image](https://github.com/julemole/prueba_tecnica/assets/71906366/26c9e744-80ef-4f3a-a793-fafe77e778ec)
+
+![image](https://github.com/julemole/prueba_tecnica/assets/71906366/70056800-3c3e-4242-96b0-9d465e354ba5)
+
+![image](https://github.com/julemole/prueba_tecnica/assets/71906366/cf9115c6-2357-4639-96c1-bc8c91bbf92c)
+
+Edición Persona
+![image](https://github.com/julemole/prueba_tecnica/assets/71906366/461b4a2d-d5ec-45f6-a4f6-ca961fb20c50)
+
+Agregar persona
+![image](https://github.com/julemole/prueba_tecnica/assets/71906366/ab07008a-137d-416b-9b71-5154bfb85ca0)
+
+
