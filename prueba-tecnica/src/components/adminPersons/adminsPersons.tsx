@@ -5,16 +5,8 @@ import { ModalComponent } from "../modal/modal"
 import { useState } from "react";
 import SearchIcon from '@mui/icons-material/Search';
 import { FormComponet } from "../form/form";
-
-
-
-export interface PersonFounded {
-    id: number;
-    titulo: string;
-    descripcion: string;
-    fecha_limite: string;
-    persona: string;
-  }
+import { PersonFounded } from "../../models/interfaces";
+import { errorAlert, succesfulAlert } from "../../utils/alerts";
 
 export const AdminsPersons = () => {
 
@@ -25,11 +17,12 @@ export const AdminsPersons = () => {
 
     const handleUserSelect = (user: any, isEdit: boolean) => {
         setSelectedUser(user);
-        setEditMode(isEdit); // Establece el modo de edición
+        setEditMode(isEdit);
     };
 
     const handleOpenModal = () => {
         setOpenModal(true);
+        setPerson(null)
     };
 
     const searchPerson = async () => {
@@ -43,10 +36,8 @@ export const AdminsPersons = () => {
             throw new Error('Error en la solicitud');
           }
           const data = await response.json();
-
-          // Mostrar los datos de la persona encontrada
+          (data.length === 0) ?  errorAlert() : succesfulAlert();
           setPerson(data);
-          console.log(data);
         } catch (error) {
           console.error('Error al buscar la persona:', error);
         }
@@ -77,20 +68,20 @@ export const AdminsPersons = () => {
         </article>
         {person && Array.isArray(person) && person.length > 0 && (
         <div>
-            <h2>Filtrar tareas por persona (tipo y número de documento):</h2>
+            <h5>Filtrar tareas por persona (tipo y número de documento):</h5>
             {person.map((persona) => (
-            <div key={persona.id}>
-                <p>ID: {persona.id}</p>
-                <p>Título: {persona.titulo}</p>
-                <p>Descripción: {persona.descripcion}</p>
-                <p>Fecha Límite: {persona.fecha_limite}</p>
-                <p>ID de la Persona: {persona.persona}</p>
+            <div key={persona.id} style={{border: '1px solid #000', borderRadius: '5px', padding: '10px'}}>
+                <p><strong>ID:</strong> {persona.id}</p>
+                <p><strong>Título:</strong> {persona.titulo}</p>
+                <p><strong>Descripción:</strong> {persona.descripcion}</p>
+                <p><strong>Fecha Límite:</strong> {persona.fecha_limite}</p>
+                <p><strong>ID de la Persona:</strong> {persona.persona}</p>
             </div>
             ))}
         </div>
         )}
         {openModal && <ModalComponent openM={openModal} setOpenM={setOpenModal} setSelectedUser={handleUserSelect}/>}
-        {selectedUser && <FormComponet user={selectedUser} editMode={editMode}/>}
+        {selectedUser && !person && <FormComponet user={selectedUser} editMode={editMode}/>}
         </section>
     )
 }

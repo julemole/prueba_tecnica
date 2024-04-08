@@ -142,7 +142,7 @@ export function FormComponet({user, editMode}: {user: Person | undefined, editMo
                 disabled={!editMode} onChange={(e) => setEstadoCivil(e.target.value)}/>
             </Grid>
         </Grid>
-        {editMode && <ButtonsComponent viewSave onCancel={() => ""} onSave={handleSave} onClean={clean}/>}
+        {editMode && <ButtonsComponent viewSave onCancel={() => null} onSave={handleSave} onClean={clean}/>}
 
     </Box>
         </>

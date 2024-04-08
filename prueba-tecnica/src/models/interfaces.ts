@@ -13,3 +13,11 @@ export interface Person {
     estado_civil:     string;
     fecha_nacimiento: string;
 }
+
+export interface PersonFounded {
+    id: number;
+    titulo: string;
+    descripcion: string;
+    fecha_limite: string;
+    persona: string;
+}

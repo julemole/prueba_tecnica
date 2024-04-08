@@ -4,6 +4,7 @@ export const succesfulAlert = () => {
     return Swal.fire({
         title: '¡Acción exitosa!',
         imageUrl: 'src/assets/img1.png',
+        width: 400,
         imageWidth: 150,
         imageHeight: 150,
         imageAlt: 'check image',
@@ -19,6 +20,7 @@ export const errorAlert = () => {
     Swal.fire({
         title: '¡Error!',
         imageUrl: 'src/assets/img2.png',
+        width: 400,
         imageWidth: 150,
         imageHeight: 150,
         imageAlt: 'check image',

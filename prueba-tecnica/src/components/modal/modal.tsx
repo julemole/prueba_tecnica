@@ -180,7 +180,7 @@ import { errorAlert, succesfulAlert } from '../../utils/alerts';
             }}
           />
         </section>
-        <ButtonsComponent viewSave={false} onCancel={handleClose} onSave={() => ""} onClean={() => ""}/>
+        <ButtonsComponent viewSave={false} onCancel={handleClose} onSave={() => ""} onClean={() => setDocumento('')}/>
         </Box>
       </Modal>
     )
